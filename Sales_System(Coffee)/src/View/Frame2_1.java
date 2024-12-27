@@ -16,6 +16,7 @@ public class Frame2_1 extends javax.swing.JFrame {
      */
     public Frame2_1() {
         initComponents();
+        this.setLocationRelativeTo(null);
     }
 
     /**

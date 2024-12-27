@@ -4,6 +4,9 @@
  */
 package View;
 
+import javax.swing.ImageIcon;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Fabrizio
@@ -43,9 +46,13 @@ public class Frame2 extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel2.setBackground(new java.awt.Color(204, 204, 204));
+        jPanel1.setBackground(new java.awt.Color(70, 48, 47));
 
-        jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 48)); // NOI18N
+        jPanel2.setBackground(new java.awt.Color(33, 25, 25));
+
+        jLabel1.setBackground(new java.awt.Color(33, 25, 25));
+        jLabel1.setFont(new java.awt.Font("Goudy Old Style", 0, 48)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(204, 204, 204));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("COFFEE \"NAME\"");
 
@@ -62,37 +69,74 @@ public class Frame2 extends javax.swing.JFrame {
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 88, Short.MAX_VALUE)
+                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 82, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
+        jLabel2.setFont(new java.awt.Font("Constantia", 0, 12)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(204, 204, 204));
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("Welcome to \"CoffeName\"!");
 
+        jLabel3.setFont(new java.awt.Font("Constantia", 0, 12)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(204, 204, 204));
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel3.setText("Type your account and password to sign in:");
 
+        jLabel4.setFont(new java.awt.Font("Constantia", 0, 12)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(204, 204, 204));
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel4.setText("USER ACCOUNT:");
 
+        txtUser.setBackground(new java.awt.Color(179, 161, 142));
+        txtUser.setForeground(new java.awt.Color(204, 204, 204));
+
+        jLabel5.setFont(new java.awt.Font("Constantia", 0, 12)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(204, 204, 204));
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel5.setText("PASSWORD:");
 
+        txtPass.setBackground(new java.awt.Color(179, 161, 142));
+        txtPass.setForeground(new java.awt.Color(204, 204, 204));
+
+        jLabel6.setFont(new java.awt.Font("Constantia", 0, 12)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(204, 204, 204));
         jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel6.setText("Or tap here to Log-In:");
 
+        btnLOG.setBackground(new java.awt.Color(106, 81, 68));
+        btnLOG.setFont(new java.awt.Font("Goudy Old Style", 0, 12)); // NOI18N
+        btnLOG.setForeground(new java.awt.Color(204, 204, 204));
         btnLOG.setText("LOG-IN");
+        btnLOG.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnLOGActionPerformed(evt);
+            }
+        });
 
+        btnSIGN.setBackground(new java.awt.Color(106, 81, 68));
+        btnSIGN.setFont(new java.awt.Font("Goudy Old Style", 0, 12)); // NOI18N
+        btnSIGN.setForeground(new java.awt.Color(204, 204, 204));
         btnSIGN.setText("SIGN-IN");
+        btnSIGN.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSIGNActionPerformed(evt);
+            }
+        });
 
+        lbliconLOG.setForeground(new java.awt.Color(204, 204, 204));
         lbliconLOG.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lbliconLOG.setText("Icon");
+        lbliconLOG.setText("Icon1");
+        lbliconLOG.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lbliconLOGMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -108,27 +152,29 @@ public class Frame2 extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(44, 44, 44)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel4)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(txtUser, javax.swing.GroupLayout.PREFERRED_SIZE, 213, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(txtPass, javax.swing.GroupLayout.PREFERRED_SIZE, 165, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(7, 7, 7)
+                        .addComponent(txtPass, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(lbliconLOG, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                .addContainerGap(47, Short.MAX_VALUE))
+                .addContainerGap(42, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(btnLOG)
                 .addGap(152, 152, 152))
+            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -163,6 +209,24 @@ public class Frame2 extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnSIGNActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSIGNActionPerformed
+        //To do here, please wait!
+    }//GEN-LAST:event_btnSIGNActionPerformed
+
+    private void btnLOGActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLOGActionPerformed
+        if (txtUser.getText().trim().isEmpty()){
+            JOptionPane.showMessageDialog(null,"Are you sure you want to exit?", "<Company's name>", JOptionPane.WARNING_MESSAGE);
+        } else {
+            Frame2_1 ventanaLogIn = new Frame2_1();
+            ventanaLogIn.setVisible(true);
+            this.setVisible(false);
+        }    }//GEN-LAST:event_btnLOGActionPerformed
+
+    private void lbliconLOGMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbliconLOGMouseClicked
+        ImageIcon icon = new ImageIcon("candado2.png");
+        lbliconLOG.setIcon(icon);
+    }//GEN-LAST:event_lbliconLOGMouseClicked
 
     /**
      * @param args the command line arguments
