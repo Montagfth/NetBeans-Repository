@@ -54,7 +54,7 @@ public class Frame2 extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Goudy Old Style", 0, 48)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(204, 204, 204));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("COFFEE \"NAME\"");
+        jLabel1.setText("Marseille Cafe");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -89,7 +89,7 @@ public class Frame2 extends javax.swing.JFrame {
         jLabel4.setText("USER ACCOUNT:");
 
         txtUser.setBackground(new java.awt.Color(179, 161, 142));
-        txtUser.setForeground(new java.awt.Color(204, 204, 204));
+        txtUser.setForeground(new java.awt.Color(0, 0, 0));
 
         jLabel5.setFont(new java.awt.Font("Constantia", 0, 12)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(204, 204, 204));
@@ -97,7 +97,7 @@ public class Frame2 extends javax.swing.JFrame {
         jLabel5.setText("PASSWORD:");
 
         txtPass.setBackground(new java.awt.Color(179, 161, 142));
-        txtPass.setForeground(new java.awt.Color(204, 204, 204));
+        txtPass.setForeground(new java.awt.Color(0, 0, 0));
 
         jLabel6.setFont(new java.awt.Font("Constantia", 0, 12)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(204, 204, 204));
