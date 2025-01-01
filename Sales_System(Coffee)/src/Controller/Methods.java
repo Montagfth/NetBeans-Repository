@@ -17,4 +17,6 @@ public interface Methods {
     public abstract void EliminarPedido();
 
     public abstract void ActualizarPedido();
+    
+    //More to code here
 }
